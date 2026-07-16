@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow Pro - Advanced To-Do List</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header>
+            <div>
+                <h1><i class="fa-solid fa-list-check"></i> TaskFlow Pro</h1>
+                <p>Manage your daily tasks efficiently</p>
+            </div>
+
+            <button id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+        </button>
+        </header>
+
+        <!-- Dashboard -->
+        <section class="dashboard">
+
+            <div class="card">
+                <h3>Total</h3>
+                <span id="totalTasks">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Completed</h3>
+                <span id="completedTasks">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Pending</h3>
+                <span id="pendingTasks">0</span>
+            </div>
+
+        </section>
+
+        <!-- Progress -->
+        <section class="progress-section">
+
+            <div class="progress-bar">
+
+                <div id="progress"></div>
+
+            </div>
+
+            <p id="progressText">0% Completed</p>
+
+        </section>
+
+        <!-- Task Form -->
+        <section class="task-form">
+
+            <input type="text" id="taskInput" placeholder="Enter task...">
+
+            <select id="priority">
+
+            <option value="High">High</option>
+
+            <option value="Medium" selected>Medium</option>
+
+            <option value="Low">Low</option>
+
+        </select>
+
+            <select id="category">
+
+            <option>Work</option>
+
+            <option>Study</option>
+
+            <option>Personal</option>
+
+            <option>Shopping</option>
+
+            <option>Other</option>
+
+        </select>
+
+            <input type="date" id="dueDate">
+
+            <button id="addTask">
+
+            <i class="fa-solid fa-plus"></i>
+
+            Add
+
+        </button>
+
+        </section>
+
+        <!-- Search -->
+        <section class="search-section">
+
+            <input type="text" id="search" placeholder="Search tasks...">
+
+        </section>
+
+        <!-- Filter -->
+        <section class="filters">
+
+            <button class="filter active" data-filter="all">
+
+            All
+
+        </button>
+
+            <button class="filter" data-filter="active">
+
+            Active
+
+        </button>
+
+            <button class="filter" data-filter="completed">
+
+            Completed
+
+        </button>
+
+        </section>
+
+        <!-- Task List -->
+        <section>
+
+            <ul id="taskList">
+
+            </ul>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+
+            <button id="clearCompleted">
+
+            <i class="fa-solid fa-trash"></i>
+
+            Clear Completed
+
+        </button>
+
+            <button id="exportBtn">
+
+            <i class="fa-solid fa-file-export"></i>
+
+            Export
+
+        </button>
+
+            <button id="importBtn">
+
+            <i class="fa-solid fa-file-import"></i>
+
+            Import
+
+        </button>
+
+            <input type="file" id="importFile" hidden>
+
+        </footer>
+
+    </div>
+
+    <!-- Toast -->
+    <div id="toast">
+
+    </div>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
